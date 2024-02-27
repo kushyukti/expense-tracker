@@ -1,0 +1,120 @@
+.nav__container {
+  padding: 2rem 1.5rem;
+  width: 374px;
+  height: 100%;
+  background: rgba(252, 246, 249, 0.78);
+  border: 3px solid #ffffff;
+  backdrop-filter: blur(4.5px);
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.nav__container-user {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav__container-user img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fcf6f9;
+  border: 2px solid #ffffff;
+  padding: 0.2rem;
+  box-shadow: 0px 1px 17px rgba(0, 0, 0, 0.06);
+}
+
+.nav__text h2 {
+  color: rgba(34, 34, 96, 1);
+}
+
+.nav__text p {
+  color: rgba(34, 34, 96, 0.6);
+}
+
+.nav__container-menuitems {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.menu-items li {
+  display: grid;
+  grid-template-columns: 40px auto;
+  align-items: center;
+  margin: 0.6rem 0;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  color: rgba(34, 34, 96, 0.6);
+  padding-left: 1rem;
+  position: relative;
+}
+
+.menu-items i {
+  color: rgba(34, 34, 96, 0.6);
+  font-size: 1.4rem;
+  transition: all.4s ease-in-out;
+}
+
+.nav__container-bottom {
+  display: grid;
+  grid-template-columns: 40px auto;
+  align-items: center;
+  margin: 0.6rem 0;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  color: rgba(34, 34, 96, 0.6);
+  padding-left: 1rem;
+  position: relative;
+}
+
+.nav__container-bottom i {
+  color: rgba(34, 34, 96, 0.6);
+  font-size: 1.4rem;
+  transition: all.4s ease-in-out;
+}
+
+.active {
+  color: rgba(34, 34, 96, 1) !important;
+}
+.active i {
+  color: rgba(34, 34, 96, 1);
+}
+
+.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: #222260;
+  border-radius: 0 10px 10px 0;
+}
+
+.nav__container-bottom:hover {
+  color: rgba(34, 34, 96, 1);
+}
+.nav__container-bottom i:hover {
+  color: rgba(34, 34, 96, 1);
+}
+
+.nav__container-bottom:hover ::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: #222260;
+  border-radius: 0 10px 10px 0;
+  transition: all 1.2s ease;
+}
