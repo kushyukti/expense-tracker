@@ -1,4 +1,65 @@
 .Incomes__innerlayout {
   padding: 2rem 1.5rem;
-  width: 100%;
+  /* width: 100%; */
+  display: flex;
+  overflow: auto;
+  flex-direction: column;
+}
+
+.total-income {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fcf6f9;
+  border: 2px solid #ffffff;
+  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
+  border-radius: 20px;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-size: 2rem;
+  gap: 0.5rem;
+}
+
+.total-income span {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-green);
+}
+
+.income_content {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-around;
+  gap: 2rem;
+
+}
+
+.incomes{
+flex: 1;
+
+}
+
+
+.btn-con button{
+  color: rgba(34, 34, 96, 0.4);
+  border: none;
+  text-decoration: none;
+  font-style: inherit;
+  font-size: inherit;
+  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
+  border-radius: 50px;
+  padding: 0.8rem 1.6rem;
+  background: var(--color-accent) !important;
+  color: #fff;
+  transition: 0.4s ease;/
+}
+
+.btn-con button:hover{
+  background: var(--color-green) !important;
+  cursor: pointer;
+} 
+
+
+.h2 {
+  color: rgba(34, 34, 96, 1);
 }

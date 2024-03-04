@@ -1,0 +1,8 @@
+.transaction__container {
+  padding: 2rem 1.5rem;
+  width: 100%;
+}
+
+.transaction__title {
+  color: black;
+}

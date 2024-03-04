@@ -1,0 +1,62 @@
+.form__input {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.input-control input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  background: transparent;
+  resize: none;
+  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
+  color: rgba(34, 34, 96, 0.9);
+  width: 100%;
+}
+.date {
+  float: right;
+}
+
+.input-control input,
+textarea,
+select ::placeholder {
+  color: rgba(34, 34, 96, 0.4);
+}
+
+.submit-control {
+  display: flex;
+  justify-content: flex-end;
+}
+.submit-control button {
+  color: rgba(34, 34, 96, 0.4);
+  border: none;
+  text-decoration: none;
+  font-style: inherit;
+  font-size: inherit;
+  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
+  border-radius: 50px;
+  padding: 0.8rem 1.6rem;
+  background: var(--color-accent) !important;
+  color: #fff;
+  transition: 0.4s ease;
+}
+.submit-control button:hover {
+  background: var(--color-green) !important;
+  cursor: pointer;
+}
+
+/* .input-control :focus,
+:active {
+  color: rgba(34, 34, 96, 1);
+} */
+
+h2 {
+  color: rgba(34, 34, 96, 1);
+}

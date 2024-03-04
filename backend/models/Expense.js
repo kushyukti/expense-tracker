@@ -1,4 +1,3 @@
-import moment from "moment";
 import mongoose from "mongoose";
 
 const expenseSchema = new mongoose.Schema(
@@ -22,7 +21,7 @@ const expenseSchema = new mongoose.Schema(
 
     date: {
       type: Date,
-      default: new Date(), // Set default value to current date
+      required: true,
     },
 
     category: {

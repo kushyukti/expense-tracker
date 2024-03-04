@@ -22,7 +22,7 @@ const incomeSchema = new mongoose.Schema(
 
     date: {
       type: Date,
-      default: () => moment().tz("Asia/Kolkata").format(), // Set default value to current date
+      required: true,
     },
 
     category: {

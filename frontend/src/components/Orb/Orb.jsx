@@ -4,7 +4,6 @@ import styled, { keyframes } from "styled-components";
 
 const orb = () => {
   const { width, height } = useWindowSize();
-  console.log(width, height);
 
   const moveOrb = keyframes`
   0% {

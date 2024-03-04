@@ -2,3 +2,99 @@
   padding: 2rem 1.5rem;
   width: 100%;
 }
+
+.stats__con {
+  display: grid;
+  gap: 2rem;
+}
+
+.chart__con {
+  height: 400px;
+}
+.amount__con {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-direction: row;
+}
+
+.amount__con __income,
+__expense {
+  grid-column: span 1;
+}
+
+.__income,
+.__expense,
+.__balance {
+  background: #fcf6f9;
+  border: 2px solid #fff;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.__income,
+.__expense,
+.__balance p {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.__income,
+.__expense,
+.__balance h2 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.__balance {
+  grid-column: 2/4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.__balance p {
+  color: var(--color-green);
+  opacity: 0.6;
+  font-size: 2.5rem;
+}
+
+.history__con {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 1;
+}
+
+.history__con h2 {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.salary_title {
+  font-size: 1.2rem;
+}
+
+.salary_title span {
+  font-size: 1.8rem;
+}
+
+.salary-item {
+  background: #fcf6f9;
+  border: 2px solid #ffffff;
+  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
+  padding: 1rem;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.salary-item p {
+  font-weight: 600;
+  font-size: 1.6rem;
+}

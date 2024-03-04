@@ -2,7 +2,7 @@ import Expense from "../models/Expense.js";
 import chalk from "chalk";
 
 export const addExpense = async (req, res) => {
-  const { title, category, description, amount, type } = req.body;
+  const { title, category, description, amount, type, date } = req.body;
   console.log(req.body);
 
   const expense = Expense({
@@ -11,15 +11,16 @@ export const addExpense = async (req, res) => {
     description,
     amount,
     type,
+    date,
   });
-  console.log(chalk.red(expense));
   try {
     if (
       !expense.title ||
       !expense.category ||
       !expense.description ||
       !expense.type ||
-      !expense.amount
+      !expense.amount ||
+      !expense.date
     ) {
       return res.status(400).send({
         success: false,
@@ -61,7 +62,7 @@ export const getAllExpense = async (req, res) => {
     res.status(500).send({
       success: false,
       message: "Internal Server Error!",
-      error: err,
+      error: error,
     });
   }
 };

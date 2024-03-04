@@ -1,3 +1,65 @@
 npm run dev
 
 nodemon server.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <section>
+          <Container>
+            <Row>
+              <div className="expense_content">
+                {/* -----------------------------income form ---------------------------------------------- */}
+                <Col lg="6">
+                  <FormExpense />
+                </Col>
+
+                {/* ------------------------------expense form--------------------------------------------- */}
+                <Col lg="6">
+                  <div className="expense">
+                    {/* {expenses.map((exp) => {
+                      const {
+                        _id,
+                        title,
+                        amount,
+                        type,
+                        date,
+                        category,
+                        description,
+                      } = exp;
+
+                      return (
+                        <ItemExpense
+                          key={_id}
+                          id={_id}
+                          title={title}
+                          description={description}
+                          amount={amount}
+                          date={dateFormat(date)}
+                          type={type}
+                          category={category}
+                          // indicatorColor="var(--color-red)"
+                          // deleteItem={deleteIncome}
+                          // setIncomes={setIncomes}
+                        />
+                      );
+                    })} */}
+                  </div>
+                </Col>
+              </div>
+            </Row>
+          </Container>
+        </section>
