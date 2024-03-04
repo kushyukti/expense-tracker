@@ -81,7 +81,7 @@ export const getExpenseById = async (req, res) => {
     res.status(500).send({
       success: false,
       message: "Internal Server Error!",
-      error: err,
+      error: error,
     });
   }
 };
@@ -101,7 +101,7 @@ export const deleteExpense = async (req, res) => {
     res.status(500).send({
       success: false,
       message: "Internal Server Error!",
-      error: err,
+      error: error,
     });
   }
 };

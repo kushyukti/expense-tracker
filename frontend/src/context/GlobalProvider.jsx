@@ -15,6 +15,7 @@ export const GlobalProviderContext = createContext();
 const GlobalProvider = ({ children }) => {
   const [incomes, setIncomes] = useState([]);
   const [expenses, setExpenses] = useState([]);
+  const [transactions, setTransactions] = useState([]);
 
   const [error, setError] = useState([]);
 
@@ -60,7 +61,7 @@ const GlobalProvider = ({ children }) => {
       totalIncome = totalIncome + income.amount;
     });
 
-    return totalIncome;
+    return totalIncome.toFixed(2);
   };
   const totalExpense = () => {
     let totalExpense = 0;
@@ -68,11 +69,11 @@ const GlobalProvider = ({ children }) => {
       totalExpense = totalExpense + expense.amount;
     });
 
-    return totalExpense;
+    return totalExpense.toFixed(2);
   };
 
   const totalBalance = () => {
-    return totalIncome() - totalExpense();
+    return (totalIncome() - totalExpense()).toFixed(2);
   };
 
   const transactionHistory = () => {
@@ -85,12 +86,11 @@ const GlobalProvider = ({ children }) => {
   };
 
   const transactionAllHistory = () => {
-    const history1 = [...incomes, ...expenses];
-    history1.sort((a, b) => {
+    const history = [...incomes, ...expenses];
+    history.sort((a, b) => {
       return new Date(b.createdAt) - new Date(a.createdAt);
     });
-
-    return history;
+    setTransactions(history);
   };
 
   return (
@@ -110,6 +110,7 @@ const GlobalProvider = ({ children }) => {
         totalBalance,
         transactionHistory,
         transactionAllHistory,
+        transactions,
       }}
     >
       {children}

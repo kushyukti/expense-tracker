@@ -53,7 +53,7 @@ export const getAllIncome = async (req, res) => {
     res.status(500).send({
       success: false,
       message: "Internal Server Error!",
-      error: err,
+      error: error,
     });
   }
 };
@@ -72,7 +72,7 @@ export const getIncomeById = async (req, res) => {
     res.status(500).send({
       success: false,
       message: "Internal Server Error!",
-      error: err,
+      error: err0r,
     });
   }
 };
@@ -92,7 +92,7 @@ export const deleteIncome = async (req, res) => {
     res.status(500).send({
       success: false,
       message: "Internal Server Error!",
-      error: err,
+      error: err0r,
     });
   }
 };

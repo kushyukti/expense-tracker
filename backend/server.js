@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
 //routes
 app.use("/api/v1/transaction", transactionRoute);
 
-app.listen(port, () => {
+app.listen(port, async () => {
   console.log(chalk.bgGreen("server listening on port:", port));
   db();
 });
