@@ -47,6 +47,11 @@ __expense {
   font-weight: 500;
 }
 
+.salary_title {
+  display: flex;
+  flex-direction: row;
+}
+
 .__balance {
   grid-column: 2/4;
   display: flex;
@@ -55,7 +60,6 @@ __expense {
   align-items: center;
 }
 .__balance p {
-  color: var(--color-green);
   opacity: 0.6;
   font-size: 2.5rem;
 }
@@ -92,9 +96,18 @@ __expense {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 25rem;
 }
 
 .salary-item p {
   font-weight: 600;
   font-size: 1.6rem;
+}
+
+.pos {
+  color: var(--color-green);
+}
+
+.neg {
+  color: #ea1b1bf6;
 }

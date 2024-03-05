@@ -16,6 +16,7 @@ const GlobalProvider = ({ children }) => {
   const [incomes, setIncomes] = useState([]);
   const [expenses, setExpenses] = useState([]);
   const [transactions, setTransactions] = useState([]);
+  const [typeOfBalance, setTypeOfBalance] = useState(true); // for positive true , for negative false
 
   const [error, setError] = useState([]);
 
@@ -111,6 +112,7 @@ const GlobalProvider = ({ children }) => {
         transactionHistory,
         transactionAllHistory,
         transactions,
+        typeOfBalance,
       }}
     >
       {children}

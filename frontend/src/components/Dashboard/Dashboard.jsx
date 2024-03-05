@@ -14,12 +14,18 @@ const Dashboard = () => {
     totalExpense,
     incomes,
     expenses,
+    typeOfBalance,
+    setTypeOfBalance,
   } = useGlobalContext();
 
   useEffect(() => {
     getExpense();
     getIncome();
   }, []);
+
+  if (totalBalance < 0) {
+    setTypeOfBalance(false);
+  }
   return (
     <div className="dashboard__container">
       <div className="dashboard__innerlayout">
@@ -43,7 +49,7 @@ const Dashboard = () => {
             </div>
             <div className="__balance">
               <h2>Total Balance</h2>
-              <p>
+              <p className={typeOfBalance ? "pos" : "neg"}>
                 {dollar} {totalBalance()}
               </p>
             </div>
@@ -58,15 +64,14 @@ const Dashboard = () => {
           <div className="history__item">
             {" "}
             <h2 className="salary-title">
-              Min <span>Salary</span>
+              Min <span>Max</span>
             </h2>
+            <h2>Income</h2>
             <div className="salary-item">
               <p>${Math.min(...incomes.map((item) => item.amount))}</p>
               <p>${Math.max(...incomes.map((item) => item.amount))}</p>
             </div>
-            <h2 className="salary-title">
-              Min <span>Expense</span>
-            </h2>
+            <h2>Expense</h2>
             <div className="salary-item">
               <p>${Math.min(...expenses.map((item) => item.amount))}</p>
               <p>${Math.max(...expenses.map((item) => item.amount))}</p>
